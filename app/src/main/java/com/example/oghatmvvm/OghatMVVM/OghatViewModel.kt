@@ -20,8 +20,8 @@ class OghatViewModel : ViewModel() {
     fun GetShareidata(city: String, country: String, method: String) {
         dispose.add(
             oghat_Model.GetShareiData(city, country, method)
-                .observeOn(AndroidSchedulers.mainThread())
                 .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
                 .subscribe({
                     ResponseSharei.value = it
                 }, {

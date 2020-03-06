@@ -32,7 +32,6 @@ class OghatModel {
                 .subscribe({
                     oghat.sunrise = it.data.timings.Sunrise
                     oghat.sunset = it.data.timings.Sunset
-                    Log.d("Sunrise", oghat.sunrise)
                 }, {
                     Log.d("Error", it.message)
                 })
